@@ -1,7 +1,7 @@
 let gameStarted = false
 let bola
 let player
-let borda = 20;
+let borda = 20
 //diametro da bola
 const diametro = 16
 //dimensoes do jogador
@@ -38,7 +38,7 @@ function mouseMoved(){
     if(player.position.y > height - 80)
         player.position.y = height - 80
     
-    return false;
+    return false
 }
 
 function mouseClicked() {
@@ -56,7 +56,7 @@ function detectaColisao(player){
         }else if(bola.position.y > player.position.y + altura){
             return
         }else{
-            bola.velocity.mult(-1)
+            bola.velocity.x *= -1
         }
     }
 }
