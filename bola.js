@@ -14,11 +14,11 @@ class Bola {
     }
 
     colisao(){
-        if(this.position.x < 7 || this.position.x > width - 7){
+        if(this.position.x < diametro/2 || this.position.x > width - diametro/2){
             this.velocity.x *= -1;
-        }else if(this.position.y < 7 || this.position.y > height - 7){
+        }else if(this.position.y < diametro/2 || this.position.y > height - diametro/2){
             this.velocity.y *= -1;
-        }else if(this.position.x < 7 && this.position.y < 7){
+        }else if(this.position.x < diametro/2 && this.position.y < diametro/2){
             this.velocity.mult(-1);
         }
     }

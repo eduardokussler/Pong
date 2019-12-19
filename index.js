@@ -1,8 +1,9 @@
 let gameStarted = false
 let bola
 let player
-
 let borda = 20;
+//diametro da bola
+const diametro = 16
 //dimensoes do jogador
 const largura = 20
 const altura = 60
@@ -24,7 +25,7 @@ function draw(){
     background(0)
     rect(player.position.x, player.position.y, largura, altura)
     if(gameStarted) {
-        circle(bola.position.x, bola.position.y, 16)
+        circle(bola.position.x, bola.position.y, diametro)
         bola.update()
         detectaColisao(player)
     }
