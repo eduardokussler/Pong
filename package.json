@@ -1,0 +1,14 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Kussler, Lucas Fell e Bruno Gerlach",
+  "license": "MIT",
+  "dependencies": {
+    "p5": "^0.10.2"
+  }
+}
