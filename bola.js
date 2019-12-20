@@ -5,7 +5,8 @@ class Bola {
     }
 
     start() {
-        this.velocity.set(3.5, 3.5)
+
+        this.velocity.set(5, 5)
     }
 
     update() {
@@ -14,12 +15,29 @@ class Bola {
         
         if(bola.position.x - raio <= largura) {
             //ponto do bot
-            players[1]["pontos"]++
+            players[1]["pontos"].val++
+            fezPonto = true
             this.position.set(width/2, height/2)
+            this.velocity.set(random(0.75, 1.25) * 5, random(0.75, 1.25) * 5)
+            if(random() < 0.5)
+                this.velocity.mult(-1)
+            
+            if(players[1].pontos.val == 10){
+                game = false
+                winner = players[1].nome
+            }
         } else if(bola.position.x + raio >= width - largura){
             //ponto do player
-            players[0].pontos++
+            fezPonto = true
+            players[0].pontos.val++
+            this.velocity.set(random(0.75, 1.25) * 5, random(0.75, 1.25) * 5)
+            if(random() < 0.5)
+                this.velocity.mult(-1)
             this.position.set(width/2, height/2)
+            if(players[0].pontos.val == 10){
+                game = false
+                winner = players[0].nome
+            }
         }
     }
 
